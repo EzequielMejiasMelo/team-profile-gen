@@ -1,0 +1,22 @@
+{
+  "name": "team-profile-gen",
+  "version": "1.0.0",
+  "description": "A CLI application that generates a webpage containing the profile information for the team members provided.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EzequielMejiasMelo/team-profile-gen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EzequielMejiasMelo/team-profile-gen/issues"
+  },
+  "homepage": "https://github.com/EzequielMejiasMelo/team-profile-gen#readme"
+}
