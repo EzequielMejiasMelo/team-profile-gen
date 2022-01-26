@@ -25,6 +25,22 @@ const managerQuestions = [
     }
 ];
 
+const menuQuestions = [
+    {
+        type: 'confirm',
+        name: 'generate',
+        message: 'Would you like to add team members?',
+        //validate
+    },
+    {
+        type: 'list',
+        name: 'choice',
+        message: 'What kind of team member would you like to generate?',
+        choices: ['Engineer', 'Intern'],
+        //validate
+    }
+]
+
 const engineerQuestions = [
     {
         type: 'input',
@@ -80,5 +96,6 @@ const internQuestions = [
 ];
 
 exports.managerQuestions = managerQuestions;
+exports.menuQuestions = menuQuestions;
 exports.engineerQuestions = engineerQuestions;
 exports.internQuestions = internQuestions;

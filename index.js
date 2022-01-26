@@ -10,11 +10,14 @@ const path = require("path");
 function init() {
     inquirer.prompt(question.managerQuestions).then(({name, id, email, officeNumber}) =>{
         const manager = new Manager(name, id, email, officeNumber);
-        menu();
-    })
+        console.log(manager);
+        // menu();
+    });
     return;
 }
 
 function menu(){
     return;
 }
+
+init();
