@@ -2,6 +2,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const questions = require("./question");
+const generateHTML = require("./src/generateDoc");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
@@ -28,7 +29,9 @@ function init() {
             }
             addTeam = additions.generate;
         }
-        return;
+        console.log(team);
+        const pageContent = await generateHTML(team);
+        return await writeFile(pageContent);
     }
 
     async function generateEngineer() {
@@ -57,3 +60,7 @@ function init() {
 }
 
 init();
+
+const writeFile = (html) => {
+    fs.writeFile("./dist/index.html", html, (e) => e? console.log(e): console.log("Team profile has been generated."))
+} 
