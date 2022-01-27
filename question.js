@@ -34,9 +34,10 @@ const menuQuestions = [
     },
     {
         type: 'list',
-        name: 'choice',
+        name: 'role',
         message: 'What kind of team member would you like to generate?',
         choices: ['Engineer', 'Intern'],
+        when: (confirm) => confirm.generate === true,
         //validate
     }
 ]
