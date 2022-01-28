@@ -9,6 +9,15 @@ describe("Intern", () => {
         })
     });
 
+    describe("getSchool", () => {
+        it("should return the school property of the object", () => {
+            const intern = new Intern("Dave", 123, "dave@company.com", "UCF");
+
+            const res = intern.getSchool();
+            expect(res).toEqual("UCF");
+        })
+    })
+
     describe("getRole", () => {
         it("should return a string 'Intern' ", () => {
             const intern = new Intern("Dave", 123, "dave@company.com", "UCF");
