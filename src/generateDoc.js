@@ -108,23 +108,27 @@ const internCard = (intern) => {
 
 const generateHTML = (team) => {
     const cards = [];
-
     for (let i=0; i<team.length; i++){
-        let employee = team[i];
+        const employee = team[i];
 
-        let role = employee.getRole();
+        const role = employee.getRole();
 
-        switch (role){
-            case 'Manager':
-                cards.push(managerCard(employee));
-            case 'Engineer':
-                cards.push(engineerCard(employee));
-            case 'Intern':
-                cards.push(internCard(employee));
+        if(cards.length === team.length){
+            break;
+        }
+
+        if (role === 'Manager'){
+            cards.push(managerCard(employee));
+        }
+
+        if (role === 'Engineer'){
+            cards.push(engineerCard(employee));
+        }
+
+        if (role === 'Intern'){
+            cards.push(internCard(employee));
         }
     }
-
-    //add fix for columns
 
     const teamCards = cards.join("");
     return generatePage(teamCards); 

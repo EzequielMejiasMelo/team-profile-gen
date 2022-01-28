@@ -18,18 +18,15 @@ function init() {
         const {name, id, email, officeNumber} = res;
         const manager = new Manager(name, id, email, officeNumber);
         team.push(manager);
-        console.log(manager);
         let addTeam = true;
         while (addTeam) {
             const additions = await menu();
-            console.log(additions);
             if(additions.generate){
                 if(additions.role === "Engineer"){ await generateEngineer()}
                 if(additions.role === "Intern"){ await generateIntern()}
             }
             addTeam = additions.generate;
         }
-        console.log(team);
         const pageContent = await generateHTML(team);
         return await writeFile(pageContent);
     }
@@ -40,7 +37,6 @@ function init() {
         const {name, id, email, github} = res;
         const engineer = new Engineer(name, id, email, github);
         team.push(engineer);
-        console.log(engineer);
     }
 
     async function generateIntern() {
@@ -49,7 +45,6 @@ function init() {
         const {name, id, email, school} = res;
         const intern = new Intern(name, id, email, school);
         team.push(intern);
-        console.log(intern);
     }
 
     async function menu(){
