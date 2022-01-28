@@ -8,6 +8,7 @@
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Testing](#testing)
   * [License](#license)
     
 ## Installation
@@ -25,6 +26,10 @@ To start the application, run `node index.js` in the command line. Answer the pr
 When you run `node index.js`, the application uses `inquirer` package to prompt you in the command line. One these are entered, the reponses are passed to he application to generate the markdown. The generation for the Table of Contents also takes into account your reponses and will not created sections that you did not provide an answer for.
 
 Lastly, the `fs` module will then write the generated markdown to your project's `index.html` file. See my example name `index.html` located in the `dist` folder in the repository.
+
+## Testing
+
+Run `npm test` to run Jest.
     
   
   ## License
