@@ -1,3 +1,4 @@
+//Contains HTML content and adds the team cards
 const generatePage = (teamCards) => {
     const doc = `<!DOCTYPE html>
     <html lang="en">
@@ -25,6 +26,7 @@ const generatePage = (teamCards) => {
     return doc;
 }
 
+//Generates Manager cards
 const managerCard = (manager) => {
     const card = `<div class="column">
     <div class="card">
@@ -52,6 +54,7 @@ const managerCard = (manager) => {
     return card;
 }
 
+//Generates Engineer cards
 const engineerCard = (engineer) => {
     const card = `<div class="column">
     <div class="card">
@@ -79,6 +82,7 @@ const engineerCard = (engineer) => {
     return card;
 }
 
+//Generates Intern cards
 const internCard = (intern) => {
     const card = `<div class="column">
     <div class="card">
@@ -106,6 +110,7 @@ const internCard = (intern) => {
     return card;
 }
 
+//Takes array with team objects and generates cards
 const generateHTML = (team) => {
     const cards = [];
     for (let i=0; i<team.length; i++){
