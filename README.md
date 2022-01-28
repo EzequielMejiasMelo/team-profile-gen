@@ -23,9 +23,9 @@ To start the application, run `node index.js` in the command line. Answer the pr
 
 [Check out this link for a video demo](https://drive.google.com/file/d/1mp2jWRMfq4tP3v7oqkojuNhKE6rTuUpf/view?usp=sharing)
 
-When you run `node index.js`, the application uses `inquirer` package to prompt you in the command line. One these are entered, the reponses are passed to he application to generate the markdown. The generation for the Table of Contents also takes into account your reponses and will not created sections that you did not provide an answer for.
+When you run `node index.js`, the application uses `inquirer` package to prompt you in the command line. Once these are entered, the reponses are passed to the application to generate the HTML. The generation for the HTML takes into account your reponses and will not create cards for team mebers that you did not provide an answer for.
 
-Lastly, the `fs` module will then write the generated markdown to your project's `index.html` file. See my example name `index.html` located in the `dist` folder in the repository.
+Lastly, the `fs` module will then write the generated HTML to your project's `index.html` file. See my example name `index.html` located in the `dist` folder in the repository.
 
 ## Testing
 
